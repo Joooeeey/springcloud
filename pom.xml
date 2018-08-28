@@ -8,7 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>springcloud</name>
+    <name>spring-cloud</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -21,6 +21,7 @@
     <modules>
         <module>eureka-server</module>
         <module>service-hi</module>
+        <module>service-ribbon</module>
     </modules>
 
     <properties>
@@ -41,10 +42,18 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-commons</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
